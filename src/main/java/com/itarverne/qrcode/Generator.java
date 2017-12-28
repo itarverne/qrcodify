@@ -139,7 +139,7 @@ class Generator {
 			throw new UnknownArgsException(args, e.getMessage());
 		}
 		   
-		if(theResult.size() > 4) {
+		if(theResult.size() > 6) {
 			 theArgsParser.printUsage();
 			 throw new UnknownArgsException(args, "Invalid arguments number");
 		}
@@ -158,7 +158,8 @@ class Generator {
 	    CONTENT = content.getValue();
 	    System.out.printf("%s Setting QRCode content : %s \n", "[DEBUG]", CONTENT);
 	    
-	    EXT = ext.getValue();
+	    if(ext.getValue() != null)
+	    	EXT = ext.getValue();
 	    System.out.printf("%s Setting extension image : %s \n", "[DEBUG]", EXT);
 	    
 	    if(width.getValue() != null) {
