@@ -10,7 +10,7 @@ Example
 
 # Help
 
-generator -h
+```generator -h```
 
 # Test
 ```mvn test```
