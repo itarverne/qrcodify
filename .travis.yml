@@ -1,0 +1,19 @@
+language: java
+  env:
+    global:
+      - CC_TEST_REPORTER_ID=80589c3747eaa020357e6c0dde8b61057b948ec975722989b80a0671ce30265e
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+script:
+  - mvn test -B
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
