@@ -1,9 +1,8 @@
-# QRCodify
+# QRCodify [![Build Status](https://travis-ci.org/itarverne/qrcodify.svg?branch=master)](https://travis-ci.org/itarverne/qrcodify)
 
 This Java tool allow to create QRCode with custom logo inside
 
 ![ITArverne QRCOde](https://raw.githubusercontent.com/itarverne/qrcodify/master/src/test/java/com/itarverne/qrcode/qDgq8MVrT.png)
-[![Build Status](https://travis-ci.org/itarverne/qrcodify.svg?branch=master)](https://travis-ci.org/itarverne/qrcodify)
 
 # Usage 
 Example
