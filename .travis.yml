@@ -14,6 +14,7 @@ before_script:
   - ./cc-test-reporter before-build
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - mvn cobertura:cobertura
+  - mv /home/travis/build/itarverne/qrcodify/target/surefire-reports/*.xml /home/travis/build/itarverne/qrcodify/target/site/cobertura/cobertura.xml
   - ./cc-test-reporter format-coverage --debug --input-type 'cobertura' --output "coverage/codeclimate.$N.json" -t /home/travis/build/itarverne/qrcodify/target/site/cobertura/cobertura.xml
   - ./cc-test-reporter sum-coverage --output coverage/codeclimate.*.json 
   - ./cc-test-reporter upload-coverage
