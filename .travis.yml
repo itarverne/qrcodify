@@ -12,7 +12,7 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
-  - mvn cobertura:cobertura --datafile='cobertura.xml'
+  - mvn cobertura:cobertura --datafile cobertura.xml
   - ./cc-test-reporter format-coverage --input-type 'cobertura' --output "coverage/codeclimate.$N.json" --debug
   - ./cc-test-reporter sum-coverage --output coverage/codeclimate.*.json 
   - ./cc-test-reporter upload-coverage
