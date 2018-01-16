@@ -13,8 +13,8 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  - mvn clean cobertura:cobertura -Dcobertura.report.format=xml
-  - ./cc-test-reporter format-coverage --debug --input-type 'cobertura' --output "coverage/codeclimate.$N.json" /home/travis/build/itarverne/qrcodify/target/site/cobertura/cobertura.xml
+  - mvn clean cobertura:cobertura
+  - ./cc-test-reporter format-coverage --debug --input-type 'cobertura' --output "coverage/codeclimate.$N.json" /home/travis/build/itarverne/qrcodify/target/site/cobertura
   - ./cc-test-reporter sum-coverage --output coverage/codeclimate.*.json 
   - ./cc-test-reporter upload-coverage
 
