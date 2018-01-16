@@ -3,19 +3,22 @@ package com.itarverne.qrcode;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+import java.lang.*;
 import java.io.File;
 
 public class GeneratorTest {
 
+	private static String PATH;
+	
 	@Before
 	public void before() {
+		PATH = System.getProperty("path");
 	}
 
 	@Test
 	public void testWithParamMandatory() {
 		try {
-			String [] args = { "-p", "C:\\Users\\general03\\Downloads\\test", "-c", "http://itarverne.com" };
+			String [] args = { "-p", PATH, "-c", "http://itarverne.com" };
 			Generator.main(args);
 			assertTrue(true);
 		}
@@ -27,10 +30,10 @@ public class GeneratorTest {
 	@Test
 	public void testQRCodeGenerated() {         
 		try {
-			String [] args = { "-p", "C:\\Users\\general03\\Downloads\\test", "-c", "http://itarverne.com" };
+			String [] args = { "-p", PATH, "-c", "http://itarverne.com" };
 			Generator.main(args);
 
-			File dir = new File("C:\\Users\\general03\\Downloads\\test");
+			File dir = new File(PATH);
 			File[] files = dir.listFiles();
 			if(files == null || files.length != 1)
 				fail("The QRCode is not generated");
