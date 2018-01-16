@@ -19,6 +19,6 @@ script:
   - mvn clean test -Dpath="test" -B
 
 after_script:
-  -  cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \
-  cc-test-reporter upload-coverage --input -
+  - cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json
+  - cc-test-reporter upload-coverage --input -
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
