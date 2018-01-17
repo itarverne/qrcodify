@@ -2,7 +2,7 @@ language: java
 
 env:
   global:
-    - CC_TEST_REPORTER_ID=80589c3747eaa020357e6c0dde8b61057b948ec975722989b80a0671ce30265e
+    - CC_TEST_REPORTER_ID=$CODECLIMATE_REPORTER_ID
 
 jdk:
   - oraclejdk8
