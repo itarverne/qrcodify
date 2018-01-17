@@ -14,7 +14,7 @@ before_script:
   - ./cc-test-reporter before-build
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - mvn clean cobertura:cobertura
-  - ./cc-test-reporter format-coverage --debug -t cobertura
+  - ./cc-test-reporter format-coverage --debug -t cobertura target/site/cobertura/coverage.xml
   - ./cc-test-reporter sum-coverage --output coverage/codeclimate.*.json 
   - ./cc-test-reporter upload-coverage
 
