@@ -16,7 +16,7 @@ before_script:
   - mvn clean cobertura:cobertura
   - ./cc-test-reporter format-coverage -t cobertura target/site/cobertura/coverage.xml --output coverage/codeclimate.$SUITE.json
   - ./cc-test-reporter sum-coverage --debug --output - coverage/codeclimate.*.json 
-  - ./cc-test-reporter upload-coverage --input -
+  - ./cc-test-reporter upload-coverage
 
 script:
   - mkdir test
