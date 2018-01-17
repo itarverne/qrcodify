@@ -1,5 +1,6 @@
 # QRCodify [![Build Status](https://travis-ci.org/itarverne/qrcodify.svg?branch=master)](https://travis-ci.org/itarverne/qrcodify)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ed9e997f0ef3d1e5245d/maintainability)](https://codeclimate.com/github/itarverne/qrcodify/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ed9e997f0ef3d1e5245d/test_coverage)](https://codeclimate.com/github/itarverne/qrcodify/test_coverage)
 
 This Java tool allow to create QRCode with custom logo inside
 
